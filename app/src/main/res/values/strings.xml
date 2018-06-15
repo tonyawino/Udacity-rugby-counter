@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Rugby Counter</string>
+    <string name="uganda">UGA</string>
+    <string name="kenya">KEN</string>
+    <string name="hyphen">-</string>
+    <string name="score_kenya">%1$d</string>
+    <string name="score_uganda">%1$d</string>
+    <string name="plusTry">try</string>
+    <string name="conversion">conversion</string>
+    <string name="drop">drop</string>
+    <string name="penalty">penalty</string>
+    <string name="penaltyTry">penalty try</string>
 </resources>

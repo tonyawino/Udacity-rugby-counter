@@ -14,7 +14,7 @@
     <LinearLayout
         android:id="@+id/flags"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="180dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="16dp"
@@ -37,10 +37,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="UGA"
+                android:text="@string/uganda"
                 android:textAllCaps="true"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="#000000"
+                android:textSize="24sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -49,7 +50,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="0"
             android:textColor="@android:color/black"
             android:textSize="48sp"
             android:textStyle="bold" />
@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="-"
+            android:text="@string/hyphen"
             android:textColor="@android:color/black"
             android:textSize="48sp" />
 
@@ -67,7 +67,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="0"
             android:textColor="@android:color/black"
             android:textSize="48sp"
             android:textStyle="bold" />
@@ -89,10 +88,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="KEN"
+                android:text="@string/kenya"
                 android:textAllCaps="true"
-                android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="#000000"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -103,8 +102,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/flags"
-        android:orientation="vertical"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/buttons"
@@ -131,8 +130,10 @@
                     android:layout_weight="1"
                     android:background="#99FCDC04"
                     android:onClick="uganda_try"
-                    android:text="try"
-                    android:textColor="@android:color/black" />
+                    android:text="@string/plusTry"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
 
                 <Button
                     android:id="@+id/uganda_conversion"
@@ -142,8 +143,10 @@
                     android:layout_weight="1"
                     android:background="#99FCDC04"
                     android:onClick="uganda_conversion"
-                    android:text="conversion"
-                    android:textColor="@android:color/black" />
+                    android:text="@string/conversion"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
 
                 <Button
                     android:id="@+id/uganda_drop"
@@ -153,8 +156,10 @@
                     android:layout_weight="1"
                     android:background="#99FCDC04"
                     android:onClick="uganda_drop"
-                    android:text="drop goal"
-                    android:textColor="@android:color/black" />
+                    android:text="@string/drop"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
 
                 <Button
                     android:id="@+id/uganda_penalty"
@@ -164,19 +169,22 @@
                     android:layout_weight="1"
                     android:background="#99FCDC04"
                     android:onClick="uganda_penalty"
-                    android:text="penalty"
-                    android:textColor="@android:color/black" />
+                    android:text="@string/penalty"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
 
                 <Button
-
                     android:id="@+id/uganda_penalty_try"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:background="#99FCDC04"
                     android:onClick="uganda_penalty_try"
-                    android:text="penalty try"
-                    android:textColor="@android:color/black" />
+                    android:text="@string/penaltyTry"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
             </LinearLayout>
 
             <View
@@ -200,8 +208,10 @@
                     android:layout_weight="1"
                     android:background="#99BB0000"
                     android:onClick="kenya_try"
-                    android:text="try"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/plusTry"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
 
                 <Button
                     android:id="@+id/kenya_conversion"
@@ -211,8 +221,10 @@
                     android:layout_weight="1"
                     android:background="#99BB0000"
                     android:onClick="kenya_conversion"
-                    android:text="conversion"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/conversion"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
 
                 <Button
                     android:id="@+id/kenya_drop"
@@ -222,8 +234,10 @@
                     android:layout_weight="1"
                     android:background="#99BB0000"
                     android:onClick="kenya_drop"
-                    android:text="drop goal"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/drop"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
 
                 <Button
                     android:id="@+id/kenya_penalty"
@@ -233,24 +247,25 @@
                     android:layout_weight="1"
                     android:background="#99BB0000"
                     android:onClick="kenya_penalty"
-                    android:text="penalty"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/penalty"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
 
                 <Button
+                    android:textAllCaps="true"
                     android:id="@+id/kenya_penalty_try"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:background="#99BB0000"
                     android:onClick="kenya_penalty_try"
-                    android:text="penalty try"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/penaltyTry"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5" />
+
 
         <Button
             android:id="@+id/reset"

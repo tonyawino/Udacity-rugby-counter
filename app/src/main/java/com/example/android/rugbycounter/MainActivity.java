@@ -14,75 +14,78 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        reset(new View(this));
     }
 
     public void uganda_try(View view){
-        uganda_score+=5;
-        TextView textBox=findViewById(R.id.ugandaScore);
-        textBox.setText(String.valueOf(uganda_score));
+        add_points_uganda(5);
     }
 
     public void uganda_conversion(View view){
-        uganda_score+=2;
-        TextView textBox=findViewById(R.id.ugandaScore);
-        textBox.setText(String.valueOf(uganda_score));
+        add_points_uganda(2);
     }
 
     public void uganda_drop(View view){
-        uganda_score+=3;
-        TextView textBox=findViewById(R.id.ugandaScore);
-        textBox.setText(String.valueOf(uganda_score));
+        add_points_uganda(3);
     }
 
     public void uganda_penalty(View view){
-        uganda_score+=3;
-        TextView textBox=findViewById(R.id.ugandaScore);
-        textBox.setText(String.valueOf(uganda_score));
+        add_points_uganda(3);
     }
 
     public void uganda_penalty_try(View view){
-        uganda_score+=7;
-        TextView textBox=findViewById(R.id.ugandaScore);
-        textBox.setText(String.valueOf(uganda_score));
+        add_points_uganda(7);
     }
 
     public void kenya_try(View view){
-        kenya_score+=5;
-        TextView textBox=findViewById(R.id.kenyaScore);
-        textBox.setText(String.valueOf(kenya_score));
+        add_points_kenya(5);
     }
 
     public void kenya_conversion(View view){
-        kenya_score+=2;
-        TextView textBox=findViewById(R.id.kenyaScore);
-        textBox.setText(String.valueOf(kenya_score));
+        add_points_kenya(2);
     }
 
     public void kenya_drop(View view){
-        kenya_score+=3;
-        TextView textBox=findViewById(R.id.kenyaScore);
-        textBox.setText(String.valueOf(kenya_score));
+        add_points_kenya(3);
     }
 
     public void kenya_penalty(View view){
-        kenya_score+=3;
-        TextView textBox=findViewById(R.id.kenyaScore);
-        textBox.setText(String.valueOf(kenya_score));
+        add_points_kenya(3);
     }
 
     public void kenya_penalty_try(View view){
-        kenya_score+=7;
-        TextView textBox=findViewById(R.id.kenyaScore);
-        textBox.setText(String.valueOf(kenya_score));
+        add_points_kenya(7);
+
     }
 
+    /*
+        This method adds points to Kenya's score and displays it
+     */
+    private void add_points_kenya(int points){
+        kenya_score+=points;
+        TextView textBox=findViewById(R.id.kenyaScore);
+        textBox.setText(getString(R.string.score_kenya, kenya_score));
+    }
+
+    /*
+        This method adds points to Uganda's score and displays it
+     */
+    private void add_points_uganda(int points){
+        uganda_score+=points;
+        TextView textBox=findViewById(R.id.ugandaScore);
+        textBox.setText(getString(R.string.score_uganda, uganda_score));
+    }
+
+    /*
+        This method resets the scores to zero and displays them
+     */
     public void reset(View view){
         TextView kenyaScoreView=findViewById(R.id.kenyaScore);
         TextView ugandaScoreView=findViewById(R.id.ugandaScore);
         kenya_score=0;
         uganda_score=0;
-        kenyaScoreView.setText(String.valueOf(kenya_score));
-        ugandaScoreView.setText(String.valueOf(uganda_score));
+        kenyaScoreView.setText(getString(R.string.score_kenya, kenya_score));
+        ugandaScoreView.setText(getString(R.string.score_uganda, uganda_score));
 
     }
 }
